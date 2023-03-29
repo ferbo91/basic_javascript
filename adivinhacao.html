@@ -1,0 +1,29 @@
+﻿<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha(){
+		document.write("<br>");
+	}
+	
+	function mostra(frase){
+		alert(frase);
+		//pulaLinha();
+	}
+	
+	var numero = Math.round(Math.random() * 10);
+	
+	var acertou = false
+	while(acertou == false){
+	
+		const num = parseInt(prompt("Adivinhe o número que estou pensando? Entre 1 e 10"));
+		
+		if(numero == num){
+			mostra("ACERTOU!");
+			mostra("O número pensado foi " + numero);
+			acertou = true;
+		} else {
+			mostra("ERROU! Tente novamente");
+		}
+	}
+</script>
